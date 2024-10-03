@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import AgeCalculator from './components/AgeCalculator';
+import BackgroundAnimation from './components/Animation';
+import Calculator from './components/Calculator';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center items-start space-x-4 p-5">
+      <BackgroundAnimation />
+      <div className="w-2/5 mt-20">
+          <Calculator />
+      </div>
+      <div className="w-2/5 mt-20">
+          <AgeCalculator />
+      </div>
     </div>
   );
 }
